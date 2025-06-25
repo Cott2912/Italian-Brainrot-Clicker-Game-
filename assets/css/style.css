@@ -918,7 +918,7 @@ textarea {
 }
 
 .header.is-visible {
-    background: var(--white);
+    background-color: black;
     -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .04);
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .04);
     opacity: 1;
@@ -4040,13 +4040,35 @@ h1.post__title {
     }
 }
 
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #0079f2;
+}
+
 .filter.tag_list {
     width: 93%;
     margin: auto !important;
     background-color: rgba(255, 255, 255, .6) !important;
     padding: 30px;
     border-radius: 8px;
-    margin-top: 5% !important
+    margin-top: 5% !important;
+    border: 6px solid goldenrod;
+
 }
 
 .tag_list .filter__item {

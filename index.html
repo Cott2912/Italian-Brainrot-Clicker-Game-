@@ -240,12 +240,7 @@
                     </a>
 
                 </li>
-                <li>
-                    <a href="https://Italian Brainrot Clicker Game .blog" target="_self">
-                        Subscribe
-                    </a>
 
-                </li>
             </ul>
         </nav>
 
@@ -266,19 +261,71 @@
         </div>
 
     </header>
+
     <main class="main">
 
 
-        <div class="main__content  wrapper">
+        <div class="main__content wrapper">
             <link rel='stylesheet' href='/assets/styles/main.css'>
-            <div style="display: flex; justify-content: center;">
-                <iframe src="https://s.clicker-game.com/games/italian-brainrot-clicker/italian-brainrot-clicker.html"
-                    style="width: 90%; height: 1100px; border: none;" frameborder="0" allow="gamepad *;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe id="gameFrame"
+                    src="https://s.clicker-game.com/games/italian-brainrot-clicker/italian-brainrot-clicker.html"
+                    style="width: 90%; height: 930px; border: none;" frameborder="0" allow="gamepad *;">
                 </iframe>
+                <div id="fullscreenBtnContainer"></div>
             </div>
+
+            <script>
+                function toggleFullScreen() {
+                    const iframe = document.getElementById("gameFrame");
+                    if (!iframe) return;
+
+                    if (document.fullscreenElement) {
+                        document.exitFullscreen();
+                    } else {
+                        if (iframe.requestFullscreen) {
+                            iframe.requestFullscreen();
+                        } else if (iframe.mozRequestFullScreen) {
+                            iframe.mozRequestFullScreen();
+                        } else if (iframe.webkitRequestFullscreen) {
+                            iframe.webkitRequestFullscreen();
+                        } else if (iframe.msRequestFullscreen) {
+                            iframe.msRequestFullscreen();
+                        }
+                    }
+                }
+
+                function createFullscreenButton() {
+                    const btnContainer = document.getElementById("fullscreenBtnContainer");
+                    if (!btnContainer || document.getElementById("fullscreenBtn")) return;
+
+                    const button = document.createElement('button');
+                    button.id = 'fullscreenBtn';
+                    button.innerHTML = 'Make Game Full Screen';
+                    button.style = `
+                                padding: 12px 20px;
+                                margin-top: 16px;
+                                background: linear-gradient(135deg, #8A0609, #7A0608);
+                                color: white;
+                                border: none;
+                                border-radius: 8px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                cursor: pointer;
+                            `;
+                    button.onclick = toggleFullScreen;
+                    btnContainer.appendChild(button);
+                }
+
+                window.addEventListener("load", () => {
+                    setTimeout(createFullscreenButton, 1500);
+                });
+            </script>
+        </div>
 
 
         </div>
+
 
 
 
@@ -831,7 +878,7 @@
         </div><br>
 
 
-
+        <!-- 
         <nav class="filter tag_list">
             <a href="/index.html" class="filter__item">All<img src="/assets/img/games.jpg" alt="All Unblocked Games"
                     loading="lazy"></a>
@@ -935,7 +982,7 @@
                     alt="Unity Games Unblocked" loading="lazy"></a>
             <a href="/zombie/index.html" class="filter__item ">Zombie<img src="/media/tags/41/zombie-games.jpg"
                     alt="Zombie Games Unblocked" loading="lazy"></a>
-        </nav>
+        </nav> -->
 
 
 
@@ -1126,6 +1173,22 @@
 
     </main>
     <footer class="footer">
+        <a href="/index.html">Home</a>
+        <a href="/new-games.html">New</a>
+        <a href="/action/index.html">Action</a>
+        <a href="/car/index.html">Car</a>
+        <a href="/driving/index.html">Driving</a>
+        <a href="/multiplayer/index.html">Multiplayer</a>
+        <a href="/shooting/index.html">Shooting</a>
+        <a href="/io-games/index.html">.io Games</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/chat.html">Chat</a>
+        <a href="/about.html">About</a>
+        <a href="/game-developers.html">Game Developers</a>
+        <a href="/contact.html">Contact</a>
+    </footer>
+
+    <!-- <footer class="footer">
         <div class="wrapper">
             <div class="footer__top">
                 <a class="logo footer__logo" href="/index.html">
@@ -1218,7 +1281,7 @@
                     With our easy-to-use browser-based platform,
                     you can start playing right away. <br> So come and join the fun today!<br> We developed this website
                     so you can play your favorite games from anywhere. <br> Email us at
-                    contact@italianbrainrotclickergame.com
+                    contact: italianbrainrotclickergame.com
                     <br> Developed by Italian Brainrot Clicker Game
                     <br>
                 </div>
@@ -1230,7 +1293,7 @@
                 <use xlink:href="/assets/svg/svg-map.svg#toparrow" />
             </svg>
         </button>
-    </footer>
+    </footer> -->
     <script defer src="/assets/js/infinite-scroll.pkgd.min.js?v=014df05a95a4e2d99b39516b72cfea1f"></script>
     <script defer src="/assets/js/isotope.pkgd.min.js?v=2afcff647ed260006faa71c8e779e8d4"></script>
     <script>

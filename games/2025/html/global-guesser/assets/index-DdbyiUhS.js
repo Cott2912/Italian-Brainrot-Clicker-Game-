@@ -5214,8 +5214,8 @@ const $4 = () => {
             }, null, -1)])), E[7] || (E[7] = w("p", {
                 class: "text-white text-2xl"
             }, [w("a", {
-                href: "mailto:contact@italianbrainrotclickergame.com"
-            }, " contact@italianbrainrotclickergame.com ")], -1))])]), i.value ? (X(), Q("div", Uo, [E[8] || (E[8] = w("div", {
+                href: "mailto:contact: italianbrainrotclickergame.com"
+            }, " contact: italianbrainrotclickergame.com ")], -1))])]), i.value ? (X(), Q("div", Uo, [E[8] || (E[8] = w("div", {
                 class: "overlay absolute top-0 left-0 right-0 bottom-0 bg-dark-gray opacity-50"
             }, null, -1)), G1(Io, {
                 updateSettingsState: c,
